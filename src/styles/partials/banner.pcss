@@ -1,6 +1,3 @@
-
-
-
 .banner {
   position: relative;
   display: flex;
@@ -8,26 +5,16 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh; /* высота хэдера */
+  height: 100vh;
   color: white;
-  background-color: $color-accent;
 }
 
 .banner-sliders {
   width: 100%;
   height: inherit;
-}
 
-#bannerSliders {
-  display: none;
-  margin-bottom: 0;
-  
-  @mixin respond-to desk {
-    display: block;
-  }
-
-  @media only screen and (orientation: landscape) {
-    display: block;
+  &#bannerSliders {
+    margin-bottom: 0;
   }
 }
 
@@ -43,52 +30,74 @@
 
 .banner-text {
   position: absolute;
-  top: 0;
+  top: 40%;
   left: 0;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-around;
   align-items: center;
   margin: 0 auto;
-  padding: 0 20%;
+  padding: 0 15px;
+  padding-bottom: 5vh;
   box-sizing: border-box;
-  width: 100%;
-  height: 100%;
+  width: unset;
+  height: 60%;
   text-align: center;
+
+  @mixin respond-to desk {
+    top: 0;
+    justify-content: flex-end;
+    padding: $padding-medium;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .banner-title {
   margin: 24px 0;
   padding: 0;
   font: var(--font-mainTitle);
-  font-style: italic;
   white-space: pre-line;
+  & br {
+    display: none;
+
+    @mixin respond-to desk {
+      display: inline;
+    }
+  }
 }
 
 .banner-imgWrapper {
   width: 100%;
   height: 100%;
-  background-color: black;
+  background-color: $color-black;
+  background-position: center;
 }
 
 .banner-slider .banner-imgWrapper .banner-img {
   width: 100%;
   height: 100%;
-  opacity: .3;
+  opacity: .5;
   background-size: cover;
 }
 
 .banner-subtitle {
+  display: none;
   margin: 0;
-  margin-bottom: $padding-big;
-  padding: 0;
+  max-width: 900px;
   font: var(--font-banner);
-  white-space: pre-line;
+  text-align: center;
   opacity: $text-opacity;
+
+  @mixin respond-to desk {
+    display: block;
+  }
 }
 
-
 .banner-logo {
-/*   margin-top: auto;
- */  width: 300px;
+  width: 180px;
+
+  @mixin respond-to desk {
+    width: 300px;
+  }
 }
