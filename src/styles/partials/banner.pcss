@@ -1,0 +1,94 @@
+
+
+
+.banner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh; /* высота хэдера */
+  color: white;
+  background-color: $color-accent;
+}
+
+.banner-sliders {
+  width: 100%;
+  height: inherit;
+}
+
+#bannerSliders {
+  display: none;
+  margin-bottom: 0;
+  
+  @mixin respond-to desk {
+    display: block;
+  }
+
+  @media only screen and (orientation: landscape) {
+    display: block;
+  }
+}
+
+.banner .banner-slider {
+  position: relative;
+  z-index: 200;
+  width: 100%;
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: 100%;
+}
+
+.banner-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 20%;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.banner-title {
+  margin: 24px 0;
+  padding: 0;
+  font: var(--font-mainTitle);
+  font-style: italic;
+  white-space: pre-line;
+}
+
+.banner-imgWrapper {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+.banner-slider .banner-imgWrapper .banner-img {
+  width: 100%;
+  height: 100%;
+  opacity: .3;
+  background-size: cover;
+}
+
+.banner-subtitle {
+  margin: 0;
+  margin-bottom: $padding-big;
+  padding: 0;
+  font: var(--font-banner);
+  white-space: pre-line;
+  opacity: $text-opacity;
+}
+
+
+.banner-logo {
+/*   margin-top: auto;
+ */  width: 300px;
+}

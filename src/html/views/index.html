@@ -3,6 +3,10 @@
 }; %>
 <%= _.template(require('./../includes/header.html'))(data) %>
 <div class="main">
-
+  <%= _.template(require('./../includes/banner.html'))(data) %>
+  <%= _.template(require('./../includes/programm.html'))(data) %>
+  <%= _.template(require('./../includes/teacher.html'))(data) %>
+  <%= _.template(require('./../includes/gallery.html'))(data) %>
+  <%= _.template(require('./../includes/brands.html'))(data) %>
 </div>
 <%= _.template(require('./../includes/footer.html'))(data) %>

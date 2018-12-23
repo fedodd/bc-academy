@@ -1,0 +1,41 @@
+.slider-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  margin: 0;
+  padding: 0;
+  transform: translateX(-50%);
+
+  @mixin respond-to desk {
+    bottom: 42px;
+    left: 200px;
+  }
+}
+
+.slider-dots li {
+  position: relative;
+  display: inline-block;
+  margin: 0 7px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: $color-black;
+  transition: $time;
+
+  &:hover {
+    cursor: pointer;
+    background-color: white;
+  }
+
+  &.slick-active {
+    background-color: white;
+  }
+
+  & button {
+    display: none;
+  }
+}
+
+.banner .banner-slider:focus {
+  outline: 0;
+}
