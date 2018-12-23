@@ -1,0 +1,17 @@
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallery-item {
+  width: 50vw;
+  height: 32vw;
+  word-spacing: 0;
+  background-position: center;
+  background-size: cover;
+
+  @mixin respond-to desk {
+    width: 33.3vw;
+    height: 22vw;
+  }
+}
