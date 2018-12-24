@@ -1,12 +1,8 @@
-.images {
-  width: 100vw;
-  min-height: 100vh;
-  background-color: $color-black__alt;
-}
-
 .gallery {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
+  background-color: $color-black__alt;
 }
 
 .gallery-item {
@@ -17,7 +13,7 @@
   background-size: cover;
 
   @mixin respond-to desk {
-    width: 33.3vw;
+    width: 33.3%;
     height: 22vw;
   }
 }
