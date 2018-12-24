@@ -28,11 +28,26 @@ $(document).ready(function () {
     },
     arrows: false,
     infinite: true,
-    autoplay: false,
+    autoplay: true,
     pauseOnHover: false,
     pauseOnDotsHover: true,
     speed: 500,
     autoplaySpeed: 5000,
     dotsClass: 'program-dots'
+  });
+});
+
+$(document).ready(function () {
+  $('.teacher-slider').slick({
+    arrows: true,
+    dots: false,
+    infinite: true,
+    autoplay: false,
+    pauseOnHover: false,
+    pauseOnDotsHover: true,
+    speed: 500,
+    autoplaySpeed: 5000,
+    nextArrow: '<button type="button" class="slick-next teacher-next"></button>',
+    prevArrow: '<button type="button" class="slick-prev teacher-prev"></button>'
   });
 });

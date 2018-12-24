@@ -1,0 +1,119 @@
+.teacher-slider {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  color: white;
+}
+
+.teacher-slider .teacher {
+  position: relative;
+  z-index: 200;
+  width: 100%;
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: 100%;
+}
+
+.teacher-imgWrapper {
+  width: 100%;
+  height: 100%;
+  background-color: $color-black;
+}
+
+.teacher .teacher-imgWrapper .teacher-img {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.teacher-text {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding-right: 100px;
+  width: 50%;
+  height: 100%;
+}
+
+.teacher-subTitle {
+  margin: 0;
+  padding: 0;
+  font: normal 30px/1.3 'FlounderPro', sans-serif;
+  opacity: $text-opacity;
+
+  @mixin respond-to desk {
+
+  }
+}
+
+.teacher-mainTitle {
+  margin: 0;
+  padding: 0;
+  font: var(--font-altTitle);
+
+  @mixin respond-to desk {
+    margin-bottom: $padding-medium;
+  }
+
+  @mixin respond-to large {
+    margin-bottom: 40px;
+  }
+}
+
+.teacher-descr {
+  margin: 0;
+  font: var(--font-text);
+
+  @mixin respond-to desk {
+    margin-bottom: 40px;
+  }
+}
+
+.teacher-buttons {
+  
+  @mixin respond-to desk {
+    margin-top: 40px;
+  }
+}
+
+#teacherSlider {
+  margin-bottom: 0;
+}
+
+
+.slick-prev.teacher-prev {
+  display: none;
+}
+
+.slick-next.teacher-next {
+  position: absolute;
+  top: 35%;
+  right: 50px;
+  transform: translateX(-100%);
+
+  &:focus::before {
+    opacity: .75;
+  }
+
+    &:hover::before {
+    opacity: 1;
+  }
+  
+  &::before {
+    font-family: 'FlounderPro';
+    font-size: 112px;
+    opacity: .75;
+    color: white;
+  }
+}
