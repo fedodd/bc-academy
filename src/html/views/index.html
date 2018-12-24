@@ -6,7 +6,9 @@
   <%= _.template(require('./../includes/banner.html'))(data) %>
   <%= _.template(require('./../includes/programm.html'))(data) %>
   <%= _.template(require('./../includes/teacher.html'))(data) %>
-  <%= _.template(require('./../includes/gallery.html'))(data) %>
-  <%= _.template(require('./../includes/brands.html'))(data) %>
+  <div class="images">
+    <%= _.template(require('./../includes/gallery.html'))(data) %>
+    <%= _.template(require('./../includes/brands.html'))(data) %>
+  </div>
 </div>
 <%= _.template(require('./../includes/footer.html'))(data) %>
