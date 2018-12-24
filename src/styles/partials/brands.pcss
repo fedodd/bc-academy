@@ -2,8 +2,11 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 0 20px;
-  background-color: $color-black__alt;
+  padding: 20px;
+
+  @mixin respond-to desk {
+    padding: 80px 20px 40px;
+  }
 }
 
 .brand {

@@ -3,7 +3,6 @@
   padding-bottom: $padding-big;
   font: var(--font-text);
   color: $color-footer;
-  background-color: $color-black__alt;
 }
 
 .footer-wrapper {
@@ -34,11 +33,20 @@
     
   &:hover {
     color: $color-accent;
+
+    & .cls-1 {
+      color: red;
+    }
   }
 
 
   &.is__alt {
     display: inline-block;
+    margin-top: 10px;
+
+    @mixin respond-to desk {
+      margin-top: 0;
+    }
   }
 
   &.is__hidden {
@@ -61,5 +69,14 @@
 
   &.is__alt {
     display: flex;
+  }
+}
+
+.footer-icon {
+  fill: #8d8d8d;
+  fill-rule: evenodd;
+
+  .footer-line:hover & {
+    fill: $color-accent;
   }
 }
