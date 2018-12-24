@@ -1,14 +1,29 @@
 
-  .social-link svg {
-    vertical-align: top;
+.social-link {
+  position: relative;
+  z-index: 100;
+  outline: none;
+  text-decoration: none;
+  color: inherit;
+
+  & span:focus {
+    outline: none;
   }
 
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.social-link svg {
+  vertical-align: top;
+}
 
 .social-icon {
   fill: #ffffff;
   fill-rule: evenodd;
 
-  .footer-line {
+  .footer-line  & {
     fill: $color-footer;
   }
 
