@@ -1,8 +1,16 @@
-/* import toggle from './toggle';
-import menuTabs from './tabs';
+/* import menuTabs from './tabs';
 import move from './vendor/move' */
-
 /* tabLinks, tabImages, tabs */
+import toggle from './toggle';
+
+const toggleBlockCut = ['popupCut'];
+toggle('.button.is__cut', toggleBlockCut, ['formCut']);
+toggle('PopupCloseCut', toggleBlockCut);
+
+const toggleBlockEnroll = ['popupEnroll'];
+toggle('.button.is__enroll', toggleBlockEnroll, ['formEnroll']);
+toggle('PopupCloseEnroll', toggleBlockEnroll);
+
 
 
 $(document).ready(function () {
