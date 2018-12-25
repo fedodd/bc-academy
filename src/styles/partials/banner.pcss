@@ -30,7 +30,7 @@
 
 .banner-text {
   position: absolute;
-  top: 40%;
+  top: calc(50% - 50px);
   left: 0;
   display: flex;
   flex-direction: column;
@@ -41,20 +41,14 @@
   padding-bottom: 5vh;
   box-sizing: border-box;
   width: unset;
-  height: 60%;
+  height: 50%;
   text-align: center;
 
   @mixin respond-to desk {
-    top: 0;
-    justify-content: flex-end;
-    padding: $padding-medium;
-    width: 100%;
-    height: 100%;
-  }
-
-  @mixin respond-to large {
     top: calc(50%-75px);
-    justify-content: flex-start;
+    justify-content: space-between;
+    padding-bottom: 0;
+    width: 100%;
     height: 50%;
   }
 }
@@ -64,6 +58,11 @@
   padding: 0;
   font: var(--font-mainTitle);
   white-space: pre-line;
+
+  @mixin respond-to desk {
+    display: none;
+  }
+
   & br {
     display: none;
 
@@ -90,7 +89,7 @@
 .banner-subtitle {
   display: none;
   margin: 0;
-  max-width: 900px;
+  max-width: 750px;
   font: var(--font-banner);
   text-align: center;
   opacity: $text-opacity;
