@@ -3,6 +3,7 @@
   position: relative;
   z-index: 100;
   outline: none;
+  font: var(--font-text);
   text-decoration: none;
   color: inherit;
 
@@ -12,6 +13,7 @@
 
   &:hover {
     cursor: pointer;
+    opacity: .5;
   }
 }
 
@@ -25,9 +27,5 @@
 
   .footer-line  & {
     fill: $color-footer;
-  }
-
-  .footer-line:hover & {
-    fill: $color-accent;
   }
 }

@@ -32,10 +32,10 @@
    color: $color-footer;
     
   &:hover {
-    color: $color-accent;
+    opacity: .5;
 
-    & .cls-1 {
-      color: red;
+    .footer-line.is__alt & {
+      opacity: 1;
     }
   }
 
@@ -60,7 +60,6 @@
 }
 
 .footer-line {
-  
   text-align: center;
 
   @mixin respond-to desk {
@@ -69,5 +68,9 @@
 
   &.is__alt {
     display: flex;
+
+    &:hover {
+      opacity: .5;
+    }
   }
 }

@@ -51,6 +51,12 @@
     width: 100%;
     height: 100%;
   }
+
+  @mixin respond-to large {
+    top: calc(50%-75px);
+    justify-content: flex-start;
+    height: 50%;
+  }
 }
 
 .banner-title {
@@ -91,6 +97,10 @@
 
   @mixin respond-to desk {
     display: block;
+  }
+
+  @mixin respond-to large {
+    margin-top: auto;
   }
 }
 

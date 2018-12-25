@@ -42,7 +42,7 @@ $(document).ready(function () {
     arrows: true,
     dots: false,
     infinite: true,
-    autoplay: false,
+    autoplay: true,
     pauseOnHover: false,
     pauseOnDotsHover: true,
     speed: 500,

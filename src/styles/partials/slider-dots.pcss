@@ -47,9 +47,12 @@
   padding: 0;
 
   @mixin respond-to desk {
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
+    top: unset;
+    bottom: 20px;
+  }
+
+  @mixin respond-to large {
+    bottom: 50px;
   }
 }
 
